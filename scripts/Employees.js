@@ -19,13 +19,7 @@ document.addEventListener(
                 if (employee.id === parseInt(employeeId)) { //on first employee...turn employeeId into an integer
                     
                     
-                    const employeeOrders = orders.filter(
-                        (order) => {
-                            if (order.employeeId === employee.id) {
-                                return true
-                            }
-                        }
-                    )
+                    const employeeOrders = orders.filter(order => order.employeeId === employee.id)                 
 
                     window.alert(`${employee.name} sold ${employeeOrders.length} products.`)
                 }
